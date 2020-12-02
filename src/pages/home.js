@@ -1,11 +1,10 @@
 import React from "react";
-import { Navbar } from "../components";
-import { NavbarContainer } from "../containers/navbar";
+import { HeaderContainer } from "../containers/header";
 
 export function Home() {
   return (
     <>
-      <NavbarContainer />
+      <HeaderContainer />
     </>
   );
 }
