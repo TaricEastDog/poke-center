@@ -1,5 +1,12 @@
 import React from "react";
-import { Frame, Background, Image, Logo, ButtonLink } from "./styles/header";
+import {
+  Frame,
+  Background,
+  Image,
+  Logo,
+  ButtonLink,
+  SignInButton,
+} from "./styles/header";
 import { Link as ReactRouterLink } from "react-router-dom";
 
 export default function Header({ children, ...restProps }) {
@@ -27,5 +34,13 @@ Header.ButtonLink = function HeaderButtonLink({ to, children, ...restProps }) {
     <ButtonLink to={to} {...restProps}>
       {children}
     </ButtonLink>
+  );
+};
+
+Header.SignInButton = function HeaderSignInButton({ to, ...restProps }) {
+  return (
+    <ReactRouterLink to={to}>
+      <SignInButton {...restProps} />
+    </ReactRouterLink>
   );
 };

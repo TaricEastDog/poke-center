@@ -26,9 +26,38 @@ export const Logo = styled.img`
   width: 108px;
   height: 52px;
   margin: 10px;
+  transition: 0.3s;
+
+  &:hover {
+    margin: 12px;
+  }
 `;
 
 export const ButtonLink = styled(ReactRouterLink)`
-  color: white;
+  background-color: #e0e000;
+  text-decoration: none;
+  color: blue;
+  font-weight: 600;
   margin: 10px;
+  height: 35px;
+  line-height: 35px;
+  padding: 0 1rem;
+  border: 2px solid #e0e000;
+  border-radius: 35px;
+  transition: 0.3s;
+
+  &:hover {
+    border: 2px solid blue;
+  }
+`;
+
+export const SignInButton = styled.img`
+  width: 124px;
+  height: 52px;
+  margin: 10px;
+  transition: 0.3s;
+
+  &:hover {
+    margin: 12px;
+  }
 `;

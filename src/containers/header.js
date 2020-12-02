@@ -6,7 +6,7 @@ export function HeaderContainer() {
     <Header>
       <Header.Frame>
         <Header.Logo src="/images/logo.png" to="/" />
-        <Header.ButtonLink to="/signin">Sign In</Header.ButtonLink>
+        <Header.SignInButton src="/images/signin.png" to="/signin" />
       </Header.Frame>
     </Header>
   );
