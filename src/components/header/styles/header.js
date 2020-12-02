@@ -11,7 +11,9 @@ export const Background = styled.div`
 `;
 
 export const Frame = styled.div`
+  display: flex;
   justify-content: space-between;
+  width: 100%;
 `;
 
 export const Image = styled.img`
@@ -23,6 +25,10 @@ export const Image = styled.img`
 export const Logo = styled.img`
   width: 108px;
   height: 52px;
+  margin: 10px;
 `;
 
-export const ButtonLink = styled(ReactRouterLink)``;
+export const ButtonLink = styled(ReactRouterLink)`
+  color: white;
+  margin: 10px;
+`;
