@@ -8,6 +8,7 @@ import {
   Input,
   SubmitButton,
   Link,
+  Error,
 } from "./styles/user-form";
 
 export default function Form({ children, ...restProps }) {
@@ -44,4 +45,8 @@ Form.Link = function FormLink({ children, to, ...restProps }) {
       {children}
     </Link>
   );
+};
+
+Form.Error = function FormError({ children, ...restProps }) {
+  return <Error {...restProps}>{children}</Error>;
 };

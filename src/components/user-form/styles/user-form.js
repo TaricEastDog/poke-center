@@ -51,3 +51,8 @@ export const Link = styled(ReactRouterLink)`
   font-size: 12px;
   color: white;
 `;
+
+export const Error = styled.p`
+  color: red;
+  font-size: 12px;
+`;
