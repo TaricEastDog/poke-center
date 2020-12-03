@@ -29,7 +29,7 @@ export const Logo = styled.img`
   transition: 0.3s;
 
   &:hover {
-    margin: 12px;
+    margin: 12px 8px 8px 12px;
   }
 `;
 
@@ -58,6 +58,22 @@ export const SignInButton = styled.img`
   transition: 0.3s;
 
   &:hover {
-    margin: 12px;
+    margin: 12px 8px 8px 12px;
   }
+`;
+
+export const SignUpButton = styled.img`
+  width: 124px;
+  height: 52px;
+  margin: 10px;
+  transition: 0.3s;
+
+  &:hover {
+    margin: 12px 8px 8px 12px;
+  }
+`;
+
+export const Group = styled.div`
+  display: flex;
+  gap: 30px;
 `;

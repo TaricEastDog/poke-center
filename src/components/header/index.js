@@ -6,6 +6,8 @@ import {
   Logo,
   ButtonLink,
   SignInButton,
+  SignUpButton,
+  Group,
 } from "./styles/header";
 import { Link as ReactRouterLink } from "react-router-dom";
 
@@ -19,6 +21,10 @@ Header.Frame = function HeaderFrame({ children, ...restProps }) {
 
 Header.Image = function HeaderImage({ ...restProps }) {
   return <Image src="/images/header-main.png" {...restProps} />;
+};
+
+Header.Group = function HeaderGroup({ children, ...restProps }) {
+  return <Group {...restProps}>{children}</Group>;
 };
 
 Header.Logo = function HeaderLogo({ to, ...restProps }) {
@@ -41,6 +47,14 @@ Header.SignInButton = function HeaderSignInButton({ to, ...restProps }) {
   return (
     <ReactRouterLink to={to}>
       <SignInButton {...restProps} />
+    </ReactRouterLink>
+  );
+};
+
+Header.SignUpButton = function HeaderSignUpButton({ to, ...restProps }) {
+  return (
+    <ReactRouterLink to={to}>
+      <SignUpButton {...restProps} />
     </ReactRouterLink>
   );
 };
