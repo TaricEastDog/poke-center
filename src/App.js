@@ -1,5 +1,5 @@
 import React from "react";
-import { Home, Signin, Signup } from "./pages";
+import { Home, Signin, Signup, Welcome } from "./pages";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 export default function App() {
@@ -14,6 +14,9 @@ export default function App() {
         </Route>
         <Route path="/signup" exact>
           <Signup />
+        </Route>
+        <Route path="/welcome" exact>
+          <Welcome />
         </Route>
       </Switch>
     </Router>
