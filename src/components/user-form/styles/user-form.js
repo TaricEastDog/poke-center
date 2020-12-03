@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  background-color: #00000085;
+  background-color: #32323295;
   border-radius: 10px;
   margin-top: 100px;
 `;
@@ -28,7 +28,7 @@ export const Base = styled.form`
 export const Input = styled.input`
   padding: 0.5rem;
   color: #dbdbdb;
-  background-color: #00000095;
+  background-color: #32323299;
   border: none;
   border-radius: 5px;
 `;
@@ -38,6 +38,7 @@ export const SubmitButton = styled.button`
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  color: #323232;
 `;
 
 export const Text = styled.p`
