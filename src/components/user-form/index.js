@@ -34,12 +34,8 @@ Form.Input = function FormInput({ children, ...restProps }) {
   return <Input {...restProps}>{children}</Input>;
 };
 
-Form.SubmitButton = function FormSubmitButton({ children, to, ...restProps }) {
-  return (
-    <SubmitButton to={to} {...restProps}>
-      {children}
-    </SubmitButton>
-  );
+Form.SubmitButton = function FormSubmitButton({ children, ...restProps }) {
+  return <SubmitButton {...restProps}>{children}</SubmitButton>;
 };
 
 Form.Link = function FormLink({ children, to, ...restProps }) {
