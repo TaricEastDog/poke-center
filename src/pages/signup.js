@@ -8,12 +8,12 @@ export default function Signup() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const { firebase_ } = useContext(FirebaseContext);
+  const { firebase } = useContext(FirebaseContext);
 
   const signInHandler = (e) => {
     e.preventDefault();
 
-    firebase_
+    firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then((res) => {

@@ -7,12 +7,12 @@ export default function Signin() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const { firebase_ } = useContext(FirebaseContext);
+  const { firebase } = useContext(FirebaseContext);
 
   const signUpHandler = (e) => {
     e.preventDefault();
 
-    firebase_
+    firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then((res) => {
