@@ -1,13 +1,15 @@
 import React from "react";
 import { Home, Signin, Signup, Welcome } from "./pages";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useAuthListener } from "./hooks";
 
 export default function App() {
+  const { user } = useAuthListener();
   return (
     <Router>
       <Switch>
         <Route path="/" exact>
-          <Home />
+          <Home user={user} />
         </Route>
         <Route path="/signin" exact>
           <Signin />
