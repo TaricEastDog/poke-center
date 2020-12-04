@@ -1,11 +1,14 @@
 import React, { useState, useContext } from "react";
 import { FirebaseContext } from "../context/firebase";
 import { Header, Form } from "../components";
+import { useHistory } from "react-router-dom";
 
 export default function Signin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
+  const history = useHistory();
 
   const { firebase } = useContext(FirebaseContext);
 
@@ -15,8 +18,8 @@ export default function Signin() {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
-      .then((res) => {
-        console.log(res);
+      .then(() => {
+        history.push("/welcome");
       })
       .catch((err) => {
         setEmail("");
@@ -34,7 +37,7 @@ export default function Signin() {
       <Form>
         <Form.Title>Sign In</Form.Title>
         {error ? <Form.Error>{error}</Form.Error> : null}
-        <Form.Base onSubmit={signUpHandler}>
+        <Form.Base onSubmit={signUpHandler} method="POST">
           <Form.Input
             value={email}
             onChange={({ target }) => setEmail(target.value)}
@@ -47,7 +50,7 @@ export default function Signin() {
             onChange={({ target }) => setPassword(target.value)}
             placeholder="Password"
           />
-          <Form.SubmitButton>Sign In</Form.SubmitButton>
+          <Form.SubmitButton type="submit">Sign In</Form.SubmitButton>
         </Form.Base>
         <Form.Text>
           New to poke-center? <Form.Link to="/signup">Sign up!</Form.Link>
