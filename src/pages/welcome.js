@@ -1,19 +1,6 @@
-import React, { useContext } from "react";
-import { FirebaseContext } from "../context/firebase";
+import React from "react";
+import { WelcomeContainer } from "../containers/welcome";
 
 export default function Welcome() {
-  const { firebase } = useContext(FirebaseContext);
-
-  return (
-    <div>
-      <p>hello from welcome page!</p>
-      <button
-        onClick={() =>
-          firebase.auth().signOut().then(console.log("signed out"))
-        }
-      >
-        SignOut
-      </button>
-    </div>
-  );
+  return <WelcomeContainer />;
 }
