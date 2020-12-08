@@ -4,12 +4,14 @@ import { Home, Signin, Signup, Welcome } from "./pages";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import { useAuthListener } from "./hooks";
 import { AuthUserRedirect, ProtectedRoute } from "./helpers/routes";
+import { NavbarContainer } from "./containers/navbar";
 
 export default function App() {
   const { user } = useAuthListener();
   return (
     <Background>
       <Router>
+        {user ? <NavbarContainer /> : null}
         <Switch>
           <AuthUserRedirect user={user} loggedPath="/welcome" path="/" exact>
             <Home />
