@@ -1,4 +1,4 @@
-import { Background } from "../header/styles/header";
+import { Background } from "./styles/background";
 import React from "react";
 
 export default function AppBackground({ children, ...restProps }) {

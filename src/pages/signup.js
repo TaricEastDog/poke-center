@@ -32,10 +32,10 @@ export default function Signup() {
   };
 
   return (
-    <Header>
-      <Header.Frame>
+    <>
+      <Header>
         <Header.Logo src="/images/logo.png" to="/" />
-      </Header.Frame>
+      </Header>
       <Form>
         <Form.Title>Sign Up</Form.Title>
         {error ? <Form.Error>{error}</Form.Error> : null}
@@ -63,6 +63,6 @@ export default function Signup() {
           Already a user? <Form.Link to="/signin">Sign in!</Form.Link>
         </Form.Text>
       </Form>
-    </Header>
+    </>
   );
 }

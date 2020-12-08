@@ -1,7 +1,6 @@
 import React from "react";
 import {
-  Frame,
-  Background,
+  Container,
   Image,
   Logo,
   ButtonLink,
@@ -12,12 +11,8 @@ import {
 import { Link as ReactRouterLink } from "react-router-dom";
 
 export default function Header({ children, ...restProps }) {
-  return <Background {...restProps}>{children}</Background>;
+  return <Container {...restProps}>{children}</Container>;
 }
-
-Header.Frame = function HeaderFrame({ children, ...restProps }) {
-  return <Frame {...restProps}>{children}</Frame>;
-};
 
 Header.Image = function HeaderImage({ ...restProps }) {
   return <Image src="/images/header-main.png" {...restProps} />;

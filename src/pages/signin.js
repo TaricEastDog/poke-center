@@ -29,11 +29,10 @@ export default function Signin() {
   };
 
   return (
-    <Header>
-      <Header.Frame>
+    <>
+      <Header>
         <Header.Logo src="/images/logo.png" to="/" />
-      </Header.Frame>
-
+      </Header>
       <Form>
         <Form.Title>Sign In</Form.Title>
         {error ? <Form.Error>{error}</Form.Error> : null}
@@ -56,6 +55,6 @@ export default function Signin() {
           New to poke-center? <Form.Link to="/signup">Sign up!</Form.Link>
         </Form.Text>
       </Form>
-    </Header>
+    </>
   );
 }
