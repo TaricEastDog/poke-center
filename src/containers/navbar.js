@@ -12,8 +12,8 @@ export function NavbarContainer() {
       <Navbar.Profile>
         <Navbar.Icon src="/images/avatars/small-avatars/1.png" />
         <Navbar.Dropdown>
-          <Navbar.Link to="/welcome">Collection</Navbar.Link>
-          <Navbar.Link to="/welcome">Settings</Navbar.Link>
+          <Navbar.Link to="/collection">Collection</Navbar.Link>
+          <Navbar.Link to="/settings">Settings</Navbar.Link>
           <Navbar.Link to="/welcome">Feedback</Navbar.Link>
           <Navbar.SignoutButton onClick={() => firebase.auth().signOut()}>
             Sign Out

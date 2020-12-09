@@ -1,6 +1,14 @@
 import React from "react";
 import { Background } from "./components";
-import { Home, Signin, Signup, Welcome } from "./pages";
+import {
+  Home,
+  Signin,
+  Signup,
+  Welcome,
+  Browse,
+  Collection,
+  Settings,
+} from "./pages";
 import { BrowserRouter as Router, Switch } from "react-router-dom";
 import { useAuthListener } from "./hooks";
 import { AuthUserRedirect, ProtectedRoute } from "./helpers/routes";
@@ -37,6 +45,18 @@ export default function App() {
 
           <ProtectedRoute path="/welcome" exact user={user}>
             <Welcome />
+          </ProtectedRoute>
+
+          <ProtectedRoute path="/browse" exact user={user}>
+            <Browse />
+          </ProtectedRoute>
+
+          <ProtectedRoute path="/collection" exact user={user}>
+            <Collection />
+          </ProtectedRoute>
+
+          <ProtectedRoute path="/settings" exact user={user}>
+            <Settings />
           </ProtectedRoute>
         </Switch>
       </Router>

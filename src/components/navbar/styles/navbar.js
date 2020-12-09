@@ -11,15 +11,31 @@ export const Container = styled.div`
 
 export const SignoutButton = styled.button`
   border: 0;
-  border-radius: 5px;
+  margin-top: 10px;
+  border-radius: 10px;
   padding: 0.4rem 1rem;
   cursor: pointer;
+  background: rgba(1, 1, 1, 0);
+  color: #e7e7e7;
+  border: 1px solid #8b8888;
+  transition: 0.3s;
+
+  &:hover {
+    background: rgba(1, 1, 1, 0.4);
+  }
 `;
 
 export const Link = styled(ReactRouterLink)`
-  padding-top: 0.5rem;
-  color: white;
+  display: block;
+  padding: 0.5rem 0;
+  color: #e7e7e7;
   text-decoration: none;
+  border-bottom: 1px solid #8b8888;
+  transition: 0.3s;
+
+  &:hover {
+    background: rgba(1, 1, 1, 0.4);
+  }
 `;
 
 export const Icon = styled.img`
@@ -33,10 +49,9 @@ export const Icon = styled.img`
 export const Dropdown = styled.div`
   display: none;
   background-color: #00000095;
-  padding: 0 10px;
-  gap: 10px;
+  padding: 0 15px;
   padding-bottom: 10px;
-  border-top: 1px solid white;
+  border-top: 1px solid #8b8888;
 `;
 
 export const Profile = styled.div`
