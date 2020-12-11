@@ -5,12 +5,15 @@ import { GlobalStyles } from "./global-styles";
 import App from "./App";
 import { firebase } from "./lib/firebase.prod";
 import { FirebaseContext } from "./context/firebase";
+import PokeProvider from "./context/pokeapi";
 
 ReactDOM.render(
   <>
     <FirebaseContext.Provider value={{ firebase }}>
-      <GlobalStyles />
-      <App />
+      <PokeProvider>
+        <GlobalStyles />
+        <App />
+      </PokeProvider>
     </FirebaseContext.Provider>
   </>,
   document.getElementById("root")
